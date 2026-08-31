@@ -51,5 +51,9 @@
     <MakeDir Directories="$(RimWorldModAbout)" />
     <Copy SourceFiles="$(MSBuildThisFileDirectory)..\About\About.xml" DestinationFolder="$(RimWorldModAbout)" />
     <Copy SourceFiles="$(MSBuildThisFileDirectory)..\About\Preview.png" DestinationFolder="$(RimWorldModAbout)" Condition="Exists('$(MSBuildThisFileDirectory)..\About\Preview.png')" />
+    <ItemGroup>
+      <LanguageFiles Include="$(MSBuildThisFileDirectory)..\Languages\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(LanguageFiles)" DestinationFolder="$(RimWorldModRoot)\Languages\%(RecursiveDir)" />
   </Target>
 </Project>

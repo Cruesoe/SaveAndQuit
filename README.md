@@ -8,6 +8,14 @@ RimWorld 1.6 mod. Commitment mode already replaces the quit buttons with **Save 
 - If the colony has no name yet, a default name is generated once and then reused.
 - Commitment mode colonies are left alone, and so is the **Quit to OS** button on the main menu.
 
+## Optional "Start" save
+
+Off by default. Enable it under **Options → Mod options → Save and Quit** and every new colony is saved as `Start` shortly after it begins.
+
+The timing is not a fixed delay. Ticks do not run while the scenario intro is on screen, so the wait starts when you dismiss it, and the save then holds until no drop pod is still falling or waiting to open — the moment your starting pawns are actually on the map. Scenarios that use no pods fall through to a timeout instead.
+
+Only new colonies are saved this way; loading an existing save never triggers it. Each new colony overwrites the previous `Start` file.
+
 Requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077). No DLC needed.
 
 ## Install

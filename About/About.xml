@@ -13,7 +13,9 @@ In the in-game menu, "Quit to main menu" and "Quit to OS" become "Save and quit 
 
 The save name is your colony's name, and the same file is overwritten every time. The normal Save button is untouched, so save-as still works.
 
-Commitment mode colonies are left alone - vanilla already does this for them.</description>
+Commitment mode colonies are left alone - vanilla already does this for them.
+
+There is also an optional "Start" save, off by default. Turn it on under Options - Mod options - Save and Quit, and each new colony is saved as "Start" once the intro is dismissed and the drop pods have landed.</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SAQ.SettingsCategory>Save and Quit</SAQ.SettingsCategory>
+  <SAQ.SaveOnGameStart>Save a "Start" file when a new colony begins</SAQ.SaveOnGameStart>
+  <SAQ.SaveOnGameStartTip>After the intro is dismissed and the drop pods have landed and opened, the colony is saved as "Start". Only new colonies are saved this way, never a loaded game. Each new colony overwrites the previous "Start" file.</SAQ.SaveOnGameStartTip>
+  <SAQ.SavedStartFile>Colony saved as "{0}".</SAQ.SavedStartFile>
+</LanguageData>
