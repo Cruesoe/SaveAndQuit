@@ -4,6 +4,7 @@ RimWorld 1.6 mod. Commitment mode already replaces the quit buttons with **Save 
 
 - Quitting saves under your colony's name and overwrites the same file each time, so there is one save to come back to.
 - No "Really quit? You'll lose unsaved progress." confirmation.
+- **Hold Alt to quit without saving.** The buttons revert to vanilla — labels, confirmation prompt and all — for as long as the key is down.
 - The **Save** button is untouched, so save-as still works.
 - If the colony has no name yet, a default name is generated once and then reused.
 - Commitment mode colonies are left alone, and so is the **Quit to OS** button on the main menu.

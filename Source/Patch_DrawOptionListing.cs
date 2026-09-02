@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using HarmonyLib;
+using UnityEngine;
 using Verse;
 using Verse.Profile;
 
@@ -12,6 +13,10 @@ namespace SaveAndQuit;
 /// The options are rewritten on their way to be drawn rather than where they are built, so
 /// anything else added to the menu is left alone. Commitment games are skipped - vanilla
 /// already gives them these options, using their own permadeath save name.
+///
+/// Holding Alt suppresses the rewrite entirely. Because this runs every OnGUI pass over a
+/// list vanilla rebuilds each time, the labels and the actions both revert live while the
+/// key is down, giving back the plain quit options and their confirmation prompt.
 /// </summary>
 [HarmonyPatch(typeof(OptionListingUtility), nameof(OptionListingUtility.DrawOptionListing))]
 public static class Patch_OptionListingUtility_DrawOptionListing
@@ -56,6 +61,11 @@ public static class Patch_OptionListingUtility_DrawOptionListing
             return false;
         }
 
+        if (QuitWithoutSavingHeld())
+        {
+            return false;
+        }
+
         Game game = Current.Game;
         if (game?.Info == null || game.Info.permadeathMode)
         {
@@ -68,6 +78,12 @@ public static class Patch_OptionListingUtility_DrawOptionListing
         }
 
         return SaveNameTracker.CanResolveSaveName();
+    }
+
+    // Live key state rather than Event.current.alt, which is not dependable on repaint events.
+    private static bool QuitWithoutSavingHeld()
+    {
+        return Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt) || Input.GetKey(KeyCode.AltGr);
     }
 
     // The labels are matched in the active language, the same way vanilla built them.
