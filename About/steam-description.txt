@@ -3,29 +3,17 @@ Every colony gets the save-and-quit buttons that commitment mode already has.
 [h1]Quitting[/h1]
 [list]
 [*][b]Quit to main menu[/b] and [b]Quit to OS[/b] become [b]Save and quit to menu[/b] and [b]Save and quit to OS[/b].
-[*]They save and exit straight away — no "you'll lose unsaved progress" prompt.
-[*]The save uses your colony's name and overwrites the same file every time, so there is one save to come back to.
-[*]Rename the colony and the next quit follows the new name. A colony with no name yet gets a default name once, then reuses it.
-[*][b]Hold Alt to quit without saving.[/b] While the key is down the buttons revert to vanilla, confirmation prompt and all.
-[*]The normal [b]Save[/b] button is untouched, so save-as still works.
+[*]The save uses your colony's name and overwrites the same file every time.
+[*][b]Hold Alt to quit without saving.[/b] While the key is down the buttons revert to vanilla
 [/list]
 
-[h1]Optional "Start" save[/h1]
+[h1]Optional[/h1]
 [list]
-[*]Off by default. Turn it on under [b]Options — Mod options — Save and Quit[/b].
 [*]Each new colony is saved as "Start", so you can always get back to the beginning.
-[*]It waits for the intro to be dismissed and for every drop pod to land and open, so your starting pawns are on the map rather than mid-drop.
-[*]Only new colonies. Loading a save never triggers it, and each new colony overwrites the previous "Start" file.
 [/list]
 
 [h1]Compatibility[/h1]
 [list]
 [*]Safe to add to an existing save.
-[*]Commitment mode colonies are left alone — vanilla already does this for them.
-[*]The main menu's own [b]Quit to OS[/b] is untouched.
-[*]Rewrites the menu options as they are drawn, so anything else added to that menu is left alone.
-[*]Requires Harmony. No DLC needed.
 [/list]
 
-[h1]Source[/h1]
-[url=https://github.com/Cruesoe/SaveAndQuit]github.com/Cruesoe/SaveAndQuit[/url] — MIT.
