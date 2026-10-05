@@ -4,7 +4,7 @@ Every colony gets the save-and-quit buttons that commitment mode already has.
 [list]
 [*][b]Quit to main menu[/b] and [b]Quit to OS[/b] become [b]Save and quit to menu[/b] and [b]Save and quit to OS[/b].
 [*]The save uses your colony's name and overwrites the same file every time.
-[*][b]Hold Alt to quit without saving.[/b] While the key is down the buttons revert to vanilla
+[*][b]Hold Alt to quit without saving.[/b] While the key is down the buttons revert to vanilla.
 [/list]
 
 [h1]Optional[/h1]
